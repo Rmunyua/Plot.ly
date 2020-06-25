@@ -26,7 +26,7 @@ function build_meta(sample) {
     d3.json("data/samples.json").then((data) => {
 
       var metadata = data.metadata;
-      var result_array = metadata.filter(i=> i.id == sample);
+      var result_array = metadata.filter(n=> n.id == sample);
       var result = result_array[0];
 
       var sample_meta = d3.select("#sample-metadata");
